@@ -1,0 +1,113 @@
+.footer {
+  background: rgba(242, 242, 242, 1);
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.menu {
+  display: flex;
+  border-top: 2px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tools {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ul {
+  color: #828282;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.3125rem;
+}
+
+.ul li {
+  cursor: pointer;
+}
+
+.ul li:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.blue {
+  color: #68c6e8;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.3125rem;
+  cursor: pointer;
+}
+
+.blue:hover {
+  opacity: 0.7;
+}
+
+.info {
+  display: flex;
+  gap: 1rem;
+}
+
+.download {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.download img {
+  cursor: pointer;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.wk {
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.wk:hover {
+  background: rgb(61, 87, 113);
+}
+
+.odn {
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.odn:hover {
+  background: rgb(190, 127, 55);
+}
+
+.youTube {
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.youTube:hover {
+  background: rgb(220, 39, 37);
+}
+
+.copy {
+  color: #828282;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  line-height: 1.125rem;
+}

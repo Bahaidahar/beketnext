@@ -1,0 +1,118 @@
+.bus_main td {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.time {
+  color: #000;
+  font-size: 1.25738rem;
+  font-weight: 500;
+  line-height: 1.25738rem;
+}
+
+.time span {
+  color: #bdbdbd;
+  font-size: 0.69156rem;
+  font-weight: 500;
+  line-height: 1.25738rem;
+}
+
+.auto_vogz {
+  display: flex;
+  color: #68c6e8;
+  font-size: 0.81731rem;
+  font-weight: 500;
+  line-height: 1.32025rem;
+  cursor: pointer;
+}
+
+.auto_vogz:hover {
+  opacity: 0.7;
+}
+
+.time_in {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.32025rem;
+}
+
+.days {
+  color: #000;
+  font-size: 0.81731rem;
+  font-weight: 500;
+  line-height: 1.32025rem;
+}
+
+.cost {
+  color: #000;
+  font-size: 1.1945rem;
+  font-weight: 400;
+  line-height: 1.88606rem;
+}
+
+.btn {
+  color: #fff;
+  font-size: 0.943rem;
+  font-weight: 500;
+  line-height: 1.50881rem;
+  border-radius: 0.2515rem;
+  background: #68c6e8;
+  padding: 1rem;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn span {
+  color: #f2f2f2;
+  font-size: 0.69156rem;
+  font-weight: 500;
+  line-height: 1.13163rem;
+}
+
+.bus_block {
+  background: #fff;
+  box-shadow: 0px 12.070653915405273px 34.2001838684082px 0px
+    rgba(27, 94, 32, 0.27);
+}
+
+.bus_more td {
+  padding: 0 1rem 1rem;
+}
+
+.line {
+  border: 1.006px solid #f2f2f2;
+}
+
+.grade {
+  color: #000;
+  font-size: 0.75444rem;
+  font-weight: 700;
+  line-height: 1.32025rem;
+}
+
+.organization {
+  color: #828282;
+  font-size: 0.81731rem;
+  font-weight: 500;
+  line-height: 1.32025rem;
+  margin-left: 10px;
+}
+
+.more_road {
+  padding: 0;
+  color: #68c6e8;
+  font-size: 0.81731rem;
+  font-weight: 500;
+  line-height: 1.32025rem;
+  text-decoration: underline dotted 2px #68c6e8;
+  text-underline-offset: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.more_road:hover {
+  opacity: 0.7;
+}

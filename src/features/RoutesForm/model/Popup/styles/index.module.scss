@@ -1,0 +1,39 @@
+.modalContainer {
+  display: none;
+  overflow: hidden;
+}
+
+.modalContainerActive {
+  overflow: hidden;
+  background-color: white;
+}
+
+.modal {
+  margin-top: 25px;
+  position: absolute;
+  background-color: white;
+  width: 15.8rem;
+  border-radius: 4px;
+  color: black;
+  font-weight: 200;
+  text-align: left;
+  overflow: auto;
+  max-height: 10rem;
+  z-index: 100;
+}
+
+.city {
+  list-style: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1rem;
+}
+
+.city span {
+  color: #828282;
+}
+
+.city:hover {
+  background-color: #81cde96c;
+}

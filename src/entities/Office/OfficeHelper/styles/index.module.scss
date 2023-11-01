@@ -1,0 +1,23 @@
+.helper {
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 600;
+  opacity: 0.8;
+  background: #eee;
+  padding: 1rem;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+    0px 6.7321014404296875px 14.13741397857666px 0px rgba(0, 0, 0, 0.1),
+    0px 25.581985473632812px 25.581985473632812px 0px rgba(0, 0, 0, 0.09),
+    0px 57.89607238769531px 35.006927490234375px 0px rgba(0, 0, 0, 0.05),
+    0px 103.00115203857422px 41.065818786621094px 0px rgba(0, 0, 0, 0.01),
+    0px 160.89723205566406px 45.105079650878906px 0px rgba(0, 0, 0, 0);
+}
+
+.helper span {
+  color: #68c6e8;
+  cursor: pointer;
+}
+
+.helper span:hover {
+  opacity: 0.7;
+}
