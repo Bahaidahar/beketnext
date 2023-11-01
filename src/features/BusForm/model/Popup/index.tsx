@@ -16,9 +16,13 @@ interface IPopup {
   setValue: (value: string) => void;
 }
 
+interface ICities {
+  name: string;
+  id: number;
+}
 const Popup: FC<IPopup> = (props) => {
   const { isPopupOpen, togglePopup, onClose, value, setValue } = props;
-  const [cities, setCities] = useState([]);
+  const [cities, setCities] = useState<ICities[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
