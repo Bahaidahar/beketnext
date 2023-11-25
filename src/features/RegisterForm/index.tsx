@@ -44,12 +44,14 @@ const RegistreForm = () => {
     if (Object.values(newErrors).every((error) => error === "")) {
       const userData = { email, password, confirmPassword, phoneNumber };
       const res = await requestOnRegister(userData);
-      setIsReged(res);
-      setEmail("");
-      setPassword("");
-      setPhoneNumber("");
-      setConfirmPassword("");
-      setIsCheckedBox(false);
+      if (res) {
+        setIsReged(res);
+        setEmail("");
+        setPassword("");
+        setPhoneNumber("");
+        setConfirmPassword("");
+        setIsCheckedBox(false);
+      }
     } else {
       setErrors(newErrors);
     }
