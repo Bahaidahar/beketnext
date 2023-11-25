@@ -1,28 +1,29 @@
 .bus_main td {
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .bus_main td {
+    padding: 1rem 3rem;
+  }
 }
 
 .time {
   color: #000;
-  font-size: 1.25738rem;
-  font-weight: 500;
-  line-height: 1.25738rem;
+  font-size: 0.9rem;
 }
 
 .time span {
   color: #bdbdbd;
-  font-size: 0.69156rem;
-  font-weight: 500;
-  line-height: 1.25738rem;
+  font-size: 0.7rem;
 }
 
 .auto_vogz {
   display: flex;
+  font-size: 0.7rem;
   color: #68c6e8;
-  font-size: 0.81731rem;
-  font-weight: 500;
-  line-height: 1.32025rem;
+
   cursor: pointer;
 }
 
@@ -32,33 +33,20 @@
 
 .time_in {
   color: #000;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.32025rem;
-}
-
-.days {
-  color: #000;
-  font-size: 0.81731rem;
-  font-weight: 500;
-  line-height: 1.32025rem;
+  font-size: 0.8rem;
 }
 
 .cost {
   color: #000;
-  font-size: 1.1945rem;
-  font-weight: 400;
-  line-height: 1.88606rem;
+  font-size: 0.8rem;
 }
 
 .btn {
   color: #fff;
-  font-size: 0.943rem;
-  font-weight: 500;
-  line-height: 1.50881rem;
+  font-size: 0.7rem;
   border-radius: 0.2515rem;
   background: #68c6e8;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 .btn:hover {
@@ -67,9 +55,7 @@
 
 .btn span {
   color: #f2f2f2;
-  font-size: 0.69156rem;
-  font-weight: 500;
-  line-height: 1.13163rem;
+  font-size: 0.7rem;
 }
 
 .bus_block {
@@ -79,7 +65,12 @@
 }
 
 .bus_more td {
-  padding: 0 1rem 1rem;
+  padding: 0.5rem 1rem 0.5rem;
+}
+@media (min-width: 768px) {
+  .bus_more td {
+    padding: 0.5rem 3rem 0.5rem;
+  }
 }
 
 .line {
@@ -88,25 +79,18 @@
 
 .grade {
   color: #000;
-  font-size: 0.75444rem;
-  font-weight: 700;
-  line-height: 1.32025rem;
+  font-size: 0.5rem;
 }
 
 .organization {
   color: #828282;
-  font-size: 0.81731rem;
-  font-weight: 500;
-  line-height: 1.32025rem;
-  margin-left: 10px;
+  font-size: 0.5rem;
 }
 
 .more_road {
   padding: 0;
   color: #68c6e8;
-  font-size: 0.81731rem;
-  font-weight: 500;
-  line-height: 1.32025rem;
+  font-size: 0.6rem;
   text-decoration: underline dotted 2px #68c6e8;
   text-underline-offset: 4px;
   text-align: center;

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Header = () => {
-  const [isLog, setIsLogged] = useState();
+  const [isLog, setIsLogged] = useState(false);
   const token = localStorage.getItem("access_token");
   useEffect(() => {
     if (token) {
@@ -14,9 +14,13 @@ const Header = () => {
     } else {
       setIsLogged(false);
     }
-  }, [token]);
+  }, []);
+  const handleLogout = () => {
+    localStorage.removeItem("access_token");
+    setIsLogged(false);
+  };
   return (
-    <header className="flex max-w-7xl my-4 mx-auto justify-between">
+    <header className="flex max-w-7xl my-4 mx-auto justify-between px-4 items-center">
       <Link href="/" className="flex hover:opacity-80">
         <Image src={rows} alt="rows" />
         <Image src={logo} alt="logo" />
@@ -29,7 +33,7 @@ const Header = () => {
         {isLog ? (
           <p
             className="text-sm text-gray cursor-pointer ml-6 hover:opacity-50"
-            onClick={() => localStorage.removeItem("access_token")}
+            onClick={handleLogout}
           >
             Выход
           </p>

@@ -14,7 +14,14 @@ const RegistreForm = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isCheckedBox, setIsCheckedBox] = useState(false);
-  const [isReged, setIsReged] = useState();
+  const [isReged, setIsReged] = useState(null);
+  const [errors, setErrors] = useState({
+    email: "",
+    password: "",
+    confirmPassword: "",
+    phoneNumber: "",
+    isCheckedBox: "",
+  });
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIsCheckedBox(event.target.checked);
@@ -36,46 +43,38 @@ const RegistreForm = () => {
 
     if (Object.values(newErrors).every((error) => error === "")) {
       const userData = { email, password, confirmPassword, phoneNumber };
-      requestOnRegister(userData).then((data) => setIsReged(data));
+      requestOnRegister(userData).then((data) => setIsReged(data.status));
+      setEmail("");
+      setPassword("");
+      setPhoneNumber("");
+      setConfirmPassword("");
+      setIsCheckedBox(false);
     } else {
       setErrors(newErrors);
+      setIsReged(null);
     }
-
-    setEmail("");
-    setPassword("");
-    setPhoneNumber("");
-    setConfirmPassword("");
-    setIsCheckedBox(false);
   };
-
-  const [errors, setErrors] = useState({
-    email: "",
-    password: "",
-    confirmPassword: "",
-    phoneNumber: "",
-    isCheckedBox: "",
-  });
 
   return (
     <form className={s.form} onSubmit={handleSubmit}>
       <Input
-        width="w-80"
+        width="80"
         value={email}
-        placeholder="ivanov@mail.ru"
+        placeholder="почта"
         type="text"
         onChange={(e) => setEmail(e.target.value)}
       />
       {errors.email && <p className={s.error}>{errors.email}</p>}
       <Input
-        width="w-80"
+        width="80"
         value={phoneNumber}
-        placeholder="+7"
+        placeholder="номер"
         type="text"
         onChange={(e) => setPhoneNumber(e.target.value)}
       />
       {errors.phoneNumber && <p className={s.error}>{errors.phoneNumber}</p>}
       <Input
-        width="w-80"
+        width="80"
         value={password}
         placeholder="пароль"
         type="password"
@@ -83,7 +82,7 @@ const RegistreForm = () => {
       />
       {errors.password && <p className={s.error}>{errors.password}</p>}
       <Input
-        width="w-80"
+        width="80"
         value={confirmPassword}
         placeholder="подтвердите пароль"
         type="password"
@@ -113,7 +112,7 @@ const RegistreForm = () => {
       {isReged === 200 && (
         <p className={s.sucess}>вы успешно зарегистрировались</p>
       )}
-      {isReged === undefined ? (
+      {isReged === 400 ? (
         <p className={s.error}>Такой пользователь уже существеут</p>
       ) : (
         ""

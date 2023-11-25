@@ -52,25 +52,17 @@
 
 .time {
   color: #000;
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.25rem;
+  font-size: 0.9rem;
 }
 
 .time span {
   color: #bdbdbd;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  line-height: 1.25rem;
+  font-size: 0.7rem;
 }
 
 .busStation {
   color: #68c6e8;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  line-height: 1.3125rem;
-  display: flex;
-  gap: 1rem;
+  font-size: 0.7rem;
   cursor: pointer;
 }
 
@@ -80,37 +72,21 @@
 
 .timeInRoad {
   color: #000;
-  font-size: 0.9925rem;
-  font-weight: 500;
-  line-height: 1.3125rem;
-}
-
-.roadInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
+  font-size: 0.9rem;
 }
 
 .price {
   color: #333;
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 2.0625rem;
+  font-size: 0.9rem;
 }
 
 .roadMore {
   color: #000;
-  font-size: 0.8125rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.3125rem;
+  font-size: 0.4rem;
 }
 
 .roadMore span {
   color: #828282;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  line-height: 1.3125rem;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -121,16 +97,12 @@
 
 .company {
   color: #000;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  line-height: 1.3125rem;
+  font-size: 0.5rem;
 }
 
 .bus {
   color: #000;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  line-height: 1.3125rem;
+  font-size: 0.5rem;
 }
 
 .date {
@@ -158,6 +130,7 @@
   border: 1px solid #e0e0e0;
   background: #fff;
   padding: 1rem;
+  outline: none;
 }
 
 .dateBtn {

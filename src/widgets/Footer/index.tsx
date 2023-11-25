@@ -11,7 +11,7 @@ const Footer = () => {
       <div className={s.main}>
         <div className={s.menu}>
           <Link href="/">
-            <Image src={logo} alt="logo" />
+            <Image src={logo} alt="logo" width={50} />
           </Link>
           <ul className={s.ul}>
             <li>Поддержка</li>
@@ -25,25 +25,35 @@ const Footer = () => {
             <li>Правила и документы </li>
             <li>Транспортным компаниям</li>
           </ul>
-          <div className={s.info}>
+          {/* <div className={s.info}>
             <div className={s.download}>
-              <Image src={googlePlay} alt="googlePlay" />
+              <Image width={60} src={googlePlay} alt="googlePlay" />
               <Image src={appStore} alt="appStore" />
             </div>
             <div className={s.contacts}>
               <p className={s.blue}>Связаться с нами по email</p>
               <p className={s.blue}>+7777777777</p>
               <div className={s.social}>
-                <Image className={s.wk} src={wk} alt="вконтакте" />
-                <Image className={s.odn} src={classmates} alt="одноклассники" />
-                <Image className={s.youTube} src={youtube} alt="youtube" />
+                <Image width={25} className={s.wk} src={wk} alt="вконтакте" />
+                <Image
+                  width={25}
+                  className={s.odn}
+                  src={classmates}
+                  alt="одноклассники"
+                />
+                <Image
+                  width={25}
+                  className={s.youTube}
+                  src={youtube}
+                  alt="youtube"
+                />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className={s.tools}>
           <div className={s.copy}>&copy; 2023, ООО «Beket»</div>
-          <div className={s.blue}>Мобильная версия</div>
+          {/* <div className={s.blue}>Мобильная версия</div> */}
         </div>
       </div>
     </footer>

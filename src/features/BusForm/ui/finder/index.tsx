@@ -24,9 +24,9 @@ const Finder: FC<IHomeFinder> = (props) => {
   };
 
   return (
-    <div>
+    <div className=" mb-6">
       <input
-        className="outline-blue my-1 py-3 px-2 rounded-lg w-50 shadow-sm text-black border border-gray relative"
+        className="outline-blue  py-3 px-2 rounded-lg w-36 shadow-sm text-black border border-gray relative"
         onClick={togglePopup}
         value={value}
         onChange={(e) => setValue(e.target.value)}

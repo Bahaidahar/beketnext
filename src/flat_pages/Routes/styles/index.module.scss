@@ -10,6 +10,7 @@
   font-size: 1rem;
   font-weight: 500;
   line-height: 1rem;
+  text-align: center;
 }
 
 .info p {
@@ -28,6 +29,11 @@
 }
 
 .table {
-  width: 100%;
-  border-spacing: 2rem;
+  margin: 0 auto;
+  border-spacing: 1rem;
+  font-size: 0.8rem;
+}
+
+.menu {
+  font-size: 0.8rem;
 }

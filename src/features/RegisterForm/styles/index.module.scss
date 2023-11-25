@@ -1,6 +1,7 @@
 .form {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 
 .submit {
@@ -62,7 +63,6 @@
   text-align: center;
   color: red;
   line-height: 0.875rem;
-  padding-bottom: 1rem;
 }
 
 .sucess {

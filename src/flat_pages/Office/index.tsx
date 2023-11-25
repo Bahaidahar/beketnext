@@ -39,7 +39,6 @@ const OfficePage = () => {
   }, []);
   return (
     <>
-      <Header />
       <main className={s.main}>
         <h2 className={s.title}>Личный кабинет</h2>
         <div className={s.main_nav}>

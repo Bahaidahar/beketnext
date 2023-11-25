@@ -1,6 +1,6 @@
 import axios from "axios";
 export const axiosInstance = axios.create({
-  baseURL: "http://localhost:8000/",
+  baseURL: "https://beksbyrestapi-7ybh5s4inq-uc.a.run.app/",
 });
 
 axiosInstance.interceptors.request.use(

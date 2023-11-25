@@ -39,7 +39,7 @@ const BusFrom = () => {
 
         open: true,
       }));
-    } else if (cityFrom && cityTo) {
+    } else if (cityFrom && cityTo && date) {
       router.push(`routes/depCity=${cityFrom}&arrCity=${cityTo}&date=${date}`);
     } else {
       setMessage((prevState) => ({
@@ -52,7 +52,7 @@ const BusFrom = () => {
 
   return (
     <form
-      className=" max-w-4xl flex gap-3  mt-5 pb-7 justify-between mx-auto flex-col"
+      className=" max-w-4xl flex gap-5  mt-5 pb-7 justify-between mx-auto flex-col items-center"
       onSubmit={(e) => e.preventDefault()}
     >
       {message.open ? (
@@ -62,52 +62,52 @@ const BusFrom = () => {
       ) : (
         " "
       )}
-      <div className="flex gap-3 items-c">
-        <Finder
-          value={cityFrom}
-          setValue={setCityFrom}
-          placeholder="Откуда"
-          exampleCity="Astana"
-        />
-        <Image
-          src={switchCity}
-          alt="switchCity"
-          className=" hover:rotate-180 transition duration-500 cursor-pointer w-7 "
-          onClick={onClickSwapCities}
-        />
-        <Finder
-          value={cityTo}
-          setValue={setCityTo}
-          placeholder="Куда"
-          exampleCity="Almaty"
-        />
-        <div className=" relative">
-          <Input
-            width="w-50"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            placeholder=""
-            type="date"
-          />
-          <p className="font-medium text-[0.6rem] mt-2 absolute left-3">
-            <span
-              className=" text-blue border-dotted border-b-2 -tracking-tighter cursor-pointer hover:opacity-60"
-              onClick={() => setDate(getTodayDateString())}
-            >
-              Сегодня
-            </span>
-            ,{" "}
-            <span
-              className=" text-blue border-dotted border-b-2 -tracking-tighter cursor-pointer hover:opacity-60"
-              onClick={() => setDate(getTomorrowDateString())}
-            >
-              Завтра
-            </span>
-            ,{" "}
-            <span className=" text-blue border-dotted border-b-2 -tracking-tighter cursor-pointer hover:opacity-60">
-              Все дни
-            </span>
-          </p>
+      <div className="flex gap-3 flex-wrap justify-center">
+        <div className=" flex gap-3 flex-wrap justify-center">
+          <div className="flex gap-3 items-start ">
+            <Finder
+              value={cityFrom}
+              setValue={setCityFrom}
+              placeholder="Откуда"
+              exampleCity="Astana"
+            />
+            <Image
+              src={switchCity}
+              alt="switchCity"
+              className="cursor-pointer w-7 pt-3"
+              onClick={onClickSwapCities}
+            />
+            <Finder
+              value={cityTo}
+              setValue={setCityTo}
+              placeholder="Куда"
+              exampleCity="Almaty"
+            />
+          </div>
+          <div className=" relative mb-6">
+            <Input
+              width="36"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              placeholder=""
+              type="date"
+            />
+            <p className="font-medium text-[0.6rem] mt-2 absolute left-3">
+              <span
+                className=" text-blue border-dotted border-b-2 -tracking-tighter cursor-pointer hover:opacity-60"
+                onClick={() => setDate(getTodayDateString())}
+              >
+                Сегодня
+              </span>
+              ,{" "}
+              <span
+                className=" text-blue border-dotted border-b-2 -tracking-tighter cursor-pointer hover:opacity-60"
+                onClick={() => setDate(getTomorrowDateString())}
+              >
+                Завтра
+              </span>
+            </p>
+          </div>
         </div>
         <Button width="w-50" onClick={onClickNavigate}>
           Найти

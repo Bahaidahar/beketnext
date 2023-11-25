@@ -25,15 +25,16 @@ const Popup: FC<IPopup> = (props) => {
   const [cities, setCities] = useState<ICities[]>([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        getAllCities().then((data) => setCities(data));
-      } catch (error) {
-        console.log("gettinAllCities", error);
-      }
-    };
     fetchData();
   }, []);
+
+  const fetchData = async () => {
+    try {
+      getAllCities().then((data) => setCities(data));
+    } catch (error) {
+      console.log("gettinAllCities", error);
+    }
+  };
 
   const popupRef = useRef<HTMLDivElement | null>(null);
   useClickOutside(popupRef, onClose, isPopupOpen);
@@ -49,21 +50,25 @@ const Popup: FC<IPopup> = (props) => {
       className={isPopupOpen ? s.modalContainerActive : s.modalContainer}
     >
       <ul className={s.modal}>
-        {cities
-          .filter((filteredCity) =>
-            filteredCity.name
-              .toLocaleLowerCase()
-              .includes(value.toLocaleLowerCase())
-          )
-          .map((city) => (
-            <li
-              className={s.city}
-              key={city.id}
-              onClick={() => handlecClick(city.name)}
-            >
-              {city.name},<span> Kazakhstan</span>
-            </li>
-          ))}
+        {cities ? (
+          cities
+            .filter((filteredCity) =>
+              filteredCity.name
+                .toLocaleLowerCase()
+                .includes(value.toLocaleLowerCase())
+            )
+            .map((city) => (
+              <li
+                className={s.city}
+                key={city.id}
+                onClick={() => handlecClick(city.name)}
+              >
+                {city.name},<span> Kazakhstan</span>
+              </li>
+            ))
+        ) : (
+          <p className=" w-50 p-4">Ошибка загрузки...</p>
+        )}
       </ul>
     </div>
   );

@@ -13,7 +13,7 @@ import wk from "./assets/ForFooter/wk.svg";
 import youtube from "./assets/ForFooter/youTube.svg";
 import document from "./assets/ForRegister/document.svg";
 import bus from "./assets/ForRegister/bus.svg";
-import place from "./assets/ForBusCard/place.svg";
+import place1 from "./assets/ForBusCard/place.svg";
 import start from "./assets/ForBusCard/star.svg";
 import select from "./assets/ForRoutesFilter/select.svg";
 import switchB from "./assets/ForRoutesFilter/switch-arrow-black.svg";
@@ -30,7 +30,7 @@ export {
   youtube,
   document,
   bus,
-  place,
+  place1,
   start,
   select,
   switchB,

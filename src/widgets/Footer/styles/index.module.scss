@@ -6,7 +6,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 
 .menu {
@@ -15,13 +15,15 @@
   border-bottom: 2px solid #e0e0e0;
   padding: 1rem;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
+  gap: 2rem;
 }
 
 .tools {
   padding-top: 1rem;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
+  text-align: center;
 }
 
 .ul {

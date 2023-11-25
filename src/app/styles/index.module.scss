@@ -1,0 +1,17 @@
+.main {
+  background: url("../../shared/assets/ForBackground/background.svg") no-repeat
+    center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  min-height: 87.8vh;
+  padding: 6rem;
+}
+@media (max-width: 700px) {
+  .main {
+    padding: 0;
+    min-height: 87vh;
+  }
+}

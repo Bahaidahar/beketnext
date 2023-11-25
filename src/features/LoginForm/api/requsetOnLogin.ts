@@ -9,8 +9,9 @@ export const requestOnLogin = async (data: ILogin) => {
   try {
     const res = await axiosInstance.post("auth", data);
     localStorage.setItem("access_token", res.data.token);
-    return res.status;
+    return res;
   } catch (error) {
     console.log("requsetOnLogin", error);
+    return error.response;
   }
 };
