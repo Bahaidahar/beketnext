@@ -28,12 +28,12 @@ const LoginForm = () => {
     if (Object.values(newErrors).every((error) => error === "")) {
       const userData = { email, password };
       const res = await requestOnLogin(userData);
-      if (res.status === 200) {
+      if (res === 200) {
         router.push("/");
-      } else if (res.response.status === 401) {
+      } else {
         setErrors({
           email: "",
-          password: `${res.response.data.message}`,
+          password: `${"Пароль или почта неверны"}`,
         });
       }
     } else {
