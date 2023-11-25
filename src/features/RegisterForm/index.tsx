@@ -14,7 +14,7 @@ const RegistreForm = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isCheckedBox, setIsCheckedBox] = useState(false);
-  const [isReged, setIsReged] = useState(null);
+  const [isReged, setIsReged] = useState<number>(0);
   const [errors, setErrors] = useState({
     email: "",
     password: "",
@@ -27,7 +27,7 @@ const RegistreForm = () => {
     setIsCheckedBox(event.target.checked);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const newErrors = {
@@ -43,7 +43,8 @@ const RegistreForm = () => {
 
     if (Object.values(newErrors).every((error) => error === "")) {
       const userData = { email, password, confirmPassword, phoneNumber };
-      requestOnRegister(userData).then((data) => setIsReged(data.status));
+      const res = await requestOnRegister(userData);
+      setIsReged(res);
       setEmail("");
       setPassword("");
       setPhoneNumber("");
@@ -51,7 +52,6 @@ const RegistreForm = () => {
       setIsCheckedBox(false);
     } else {
       setErrors(newErrors);
-      setIsReged(null);
     }
   };
 
@@ -112,7 +112,7 @@ const RegistreForm = () => {
       {isReged === 200 && (
         <p className={s.sucess}>вы успешно зарегистрировались</p>
       )}
-      {isReged === 400 ? (
+      {isReged === undefined ? (
         <p className={s.error}>Такой пользователь уже существеут</p>
       ) : (
         ""
