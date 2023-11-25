@@ -10,7 +10,8 @@ import { axiosInstance } from "@/shared/lib/axiosInstance";
 
 const OfficePage = () => {
   const router = useRouter();
-  const token = localStorage.getItem("access_token");
+  const token =
+    typeof window !== "undefined" ? localStorage.getItem("access_token") : null;
   const [activeTab, setActiveTab] = useState(0);
   const [settings, setSettings] = useState(false);
   const handleTabClick = (index: number) => {

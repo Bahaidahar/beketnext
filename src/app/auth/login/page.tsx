@@ -9,7 +9,8 @@ import { useRouter } from "next/navigation";
 
 const Page = () => {
   const router = useRouter();
-  const token = localStorage.getItem("token");
+  const token =
+    typeof window !== "undefined" ? localStorage.getItem("access_token") : null;
   useEffect(() => {
     if (token) {
       router.push("/office");
