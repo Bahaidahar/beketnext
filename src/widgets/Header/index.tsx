@@ -7,7 +7,8 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const [isLog, setIsLogged] = useState(false);
-  const token = localStorage.getItem("access_token");
+  const token =
+    typeof window !== "undefined" ? localStorage.getItem("access_token") : null;
   useEffect(() => {
     if (token) {
       setIsLogged(true);
