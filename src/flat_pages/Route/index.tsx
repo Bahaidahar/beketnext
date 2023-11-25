@@ -104,7 +104,7 @@ const RoutePage = ({ depCity, arrCity, dateOf, id }: IRoutePage) => {
     }
   };
 
-  const handleFormSubmit = async (e) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (

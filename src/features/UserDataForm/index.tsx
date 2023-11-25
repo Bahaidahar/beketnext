@@ -25,7 +25,7 @@ interface Props {
   error: string;
   setError: (error: string) => void;
   price: number;
-  handleFormSubmit: (e) => void;
+  handleFormSubmit: (e: React.FormEvent) => void;
 }
 
 const UserDataForm = (props: Props) => {
@@ -53,11 +53,11 @@ const UserDataForm = (props: Props) => {
     handleFormSubmit,
   } = props;
 
-  const handleButtonClick = (gender: string, e) => {
+  const handleButtonClick = (gender: string, e: React.MouseEvent) => {
     e.preventDefault();
     setSelectedGender(gender);
   };
-  const handleDateChange = (e) => {
+  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newDateValue = e.target.value;
     setDataOfBirth(newDateValue);
   };
