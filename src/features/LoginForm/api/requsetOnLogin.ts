@@ -11,7 +11,6 @@ export const requestOnLogin = async (data: ILogin) => {
     localStorage.setItem("access_token", res.data.token);
     return res;
   } catch (error) {
-    console.log("requsetOnLogin", error);
     return error;
   }
 };

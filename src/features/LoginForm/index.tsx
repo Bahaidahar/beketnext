@@ -30,10 +30,10 @@ const LoginForm = () => {
       const res = await requestOnLogin(userData);
       if (res.status === 200) {
         router.push("/");
-      } else if (res.status === 401) {
+      } else if (res.response.status === 401) {
         setErrors({
           email: "",
-          password: `${res.data.message}`,
+          password: `${res.response.data.message}`,
         });
       }
     } else {
