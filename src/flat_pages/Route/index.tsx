@@ -61,6 +61,9 @@ const RoutePage = ({ depCity, arrCity, dateOf, id }: IRoutePage) => {
   const [selectedGender, setSelectedGender] = useState("");
   const [place, setPlace] = useState("");
   const [error, setError] = useState("");
+  const token =
+    typeof window !== "undefined" ? localStorage.getItem("access_token") : null;
+
   useEffect(() => {
     if (dateOfTrip !== dateOf) {
       router.push(
@@ -103,10 +106,14 @@ const RoutePage = ({ depCity, arrCity, dateOf, id }: IRoutePage) => {
       console.log("fetchingRoadData", error);
     }
   };
-
+  console.log(token);
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    if (token === null) {
+      alert("Пожалуйста зарегистрируйтесь");
+      return 0;
+    }
     if (
       surName.trim() === "" ||
       name.trim() === "" ||
@@ -121,8 +128,6 @@ const RoutePage = ({ depCity, arrCity, dateOf, id }: IRoutePage) => {
       setError("Пожалуйста, заполните все обязательные поля.");
       return;
     } else {
-      const token = localStorage.getItem("access_token");
-
       if (token && dataOfRoad) {
         try {
           const { price, ...roadId } = dataOfRoad;
@@ -135,7 +140,7 @@ const RoutePage = ({ depCity, arrCity, dateOf, id }: IRoutePage) => {
             name: citizenshipFor,
             shortName: "Kaz",
           };
-          const res = await requsetOnTicket({
+          await requsetOnTicket({
             token,
             roadId,
             name,
@@ -149,7 +154,7 @@ const RoutePage = ({ depCity, arrCity, dateOf, id }: IRoutePage) => {
           });
           router.push("/final");
         } catch (error) {
-          console.error("An error occurred while handling the form:", error);
+          console.log(error);
         }
       }
     }

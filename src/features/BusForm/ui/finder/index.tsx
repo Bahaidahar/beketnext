@@ -43,7 +43,7 @@ const Finder: FC<IHomeFinder> = (props) => {
         className=" absolute text-[0.8rem] text-gray mt-1"
         onClick={onClickExampleCity}
       >
-        Напиример: <span className={s.word}>{exampleCity}</span>
+        Например: <span className={s.word}>{exampleCity}</span>
       </p>
     </div>
   );
